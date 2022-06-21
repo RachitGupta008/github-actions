@@ -1,0 +1,10 @@
+name: start
+on: [push]
+
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple Js
+        run : echo "Hello Js"
