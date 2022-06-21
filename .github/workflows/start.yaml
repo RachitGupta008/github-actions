@@ -8,3 +8,11 @@ jobs:
     steps:
       - name: Simple Js
         run : echo "Hello Js"
+      - name: Calling other action
+        id: JSAction
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: Rachit
+        
+      - name: Using jsaction output
+        run: echo ${{steps.JSAction.outputs.time}}
