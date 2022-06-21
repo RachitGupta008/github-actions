@@ -15,4 +15,4 @@ jobs:
           who-to-greet: Rachit
         
       - name: Using jsaction output
-        run: echo ${{steps.JSAction.outputs.time}}
+        run: echo "${{steps.JSAction.outputs.time}}"
