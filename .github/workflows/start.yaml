@@ -28,7 +28,7 @@ jobs:
       - name: Step with docker
         uses: docker://node:12.14.1-alpine3.10
         with:
-          entrypoint: "/bin/ls"
+          entrypoint: "./hello.sh"
           args: "-a"  
 
-          
+
