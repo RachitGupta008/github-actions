@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-#cat /etc/os-release
-#/bin/ls -ltr
+cat /etc/os-release
+ls -ltr
 
-#echo "Hello World from docker"
+echo "Hello ${1} from docker"
