@@ -3,4 +3,4 @@
 #cat /etc/os-release
 /bin/ls -ltr
 
-echo "Hello World from docker"
+#echo "Hello World from docker"
