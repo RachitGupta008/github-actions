@@ -17,7 +17,7 @@ jobs:
       - name: Run Bash
         shell: bash
         run: |
-              ls -ltr
+              ls -altr
               git branch hello
               git checkout hello
            
