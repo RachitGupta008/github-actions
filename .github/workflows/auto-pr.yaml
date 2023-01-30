@@ -6,7 +6,7 @@ on:
 jobs:
   check:
     name: check
-    runs-on: ubuntu
+    runs-on: ubuntu-18.04
     steps:
       - name: Setup repo
         uses: actions/checkout@v3
