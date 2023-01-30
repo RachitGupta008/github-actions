@@ -1,3 +1,25 @@
 name: auto-pr
 
-on:
+on: 
+  workflow_dispatch:
+    
+jobs:
+  check:
+    name: check
+    runs-on: ubuntu
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v3
+        with:
+           repository: RachitGupta008/learn-terraform
+           ref : main
+
+      - name: Run Bash
+        shell: bash
+        run: |
+              ls -ltr
+              git branch hello
+              git checkout hello
+           
+      
+  
