@@ -1,6 +1,9 @@
 name: test-1
 
 on: 
+  push:
+    branches:
+      - test1
   workflow_dispatch:
     
 jobs:
