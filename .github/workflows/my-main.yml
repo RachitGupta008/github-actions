@@ -1,0 +1,12 @@
+name: my-main-workflow
+
+on:
+  schedule:
+    - cron: '*/7 * * * *'
+  
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use My Workflow
+        uses: ./.github/workflows/schedule.yml
