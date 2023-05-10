@@ -3,6 +3,7 @@ name: my-main-workflow
 on:
   schedule:
     - cron: '*/7 * * * *'
+  workflow_dispatch:
   
 jobs:
   my-job:
