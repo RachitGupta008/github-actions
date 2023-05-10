@@ -1,7 +1,5 @@
 name: Scheduled Workflow
 on:
-  schedule:
-    - cron: '*/6 * * * *'
   workflow_dispatch:
   workflow_call:
 
