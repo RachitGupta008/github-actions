@@ -2,6 +2,7 @@ name: Scheduled Workflow
 on:
   schedule:
     - cron: '* * * * *'
+  workflow_dispatch:
 
 jobs:
   build:
