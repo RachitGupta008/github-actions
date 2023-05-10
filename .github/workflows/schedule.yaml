@@ -1,0 +1,11 @@
+name: Scheduled Workflow
+on:
+  schedule:
+    - cron: '*/30 * * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Current Time
+        run: echo "The current time is $(date)."
