@@ -1,0 +1,8 @@
+name: My Action
+description: An example action
+runs:
+  using: "composite"
+  steps:
+    - name: HELLO
+      run: | 
+           echo "hello from action"
