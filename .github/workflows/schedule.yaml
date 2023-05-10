@@ -17,4 +17,4 @@ jobs:
             echo "The current time is $(date)."
             ls -ltr
       - name: Use My Action
-        uses: ./.github/actions/test
+        uses: RachitGupta008/github-actions/.github/actions/test@master
