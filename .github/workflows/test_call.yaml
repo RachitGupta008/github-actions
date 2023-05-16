@@ -22,7 +22,7 @@ jobs:
             echo ${{ contains(github.event.inputs.test1, 'YES') }}
             echo ${{ github.event.inputs.test1 }}
       - name: Check input value1
-        if:  ${{ contains(inputs.test1, 'YES') }}
+        if:  ${{ !contains(inputs.test1, 'NO') }}
         run: |
           if [ ${{ inputs.test1 }} = 'YES' ]; then
             echo "Input value is YES"
