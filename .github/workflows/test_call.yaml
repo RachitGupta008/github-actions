@@ -4,8 +4,8 @@ on:
   workflow_call:
     inputs:
       test:
-        default: 'YES'
-        type: string
+        default: true
+        type: boolean
 
 jobs:
   conditional-job:
@@ -13,9 +13,9 @@ jobs:
     
     steps:
       - name: Check input value
-        if: contains(github.event.inputs.test, 'YES')
+        if: github.events.inputs.test
         run: |
-          if [ "${{ github.event.inputs.test }}" == "YES" ]; then
+          if [ ${{ github.event.inputs.test }}" ]; then
             echo "Input value is YES"
             # Add the steps you want to run when the input value is YES
           else
