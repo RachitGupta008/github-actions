@@ -13,7 +13,7 @@ jobs:
     
     steps:
       - name: Check input value
-        if: "contains(github.event.inputs.test, 'YES')"
+        if: contains(github.event.inputs.test, 'YES')
         run: |
           if [ "${{ github.event.inputs.test }}" == "YES" ]; then
             echo "Input value is YES"
