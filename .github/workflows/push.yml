@@ -2,8 +2,7 @@ name: On Push Workflow
 
 on:
   push:
-    branches-ignore:
-      - master
+    branches: ["test-push"]
 
 jobs:
   build:
