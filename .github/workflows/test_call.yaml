@@ -12,8 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Check
+        run: |
+            echo ${{ github.event.inputs.test }}
       - name: Check input value
-        if: github.event.inputs.test
+        if: ${{ github.event.inputs.test }}
         run: |
           if [ ${{ github.event.inputs.test }} ]; then
             echo "Input value is YES"
