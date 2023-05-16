@@ -6,6 +6,9 @@ on:
       test:
         default: true
         type: boolean
+      test1:
+        default: 'YES'
+        type: string
 
 jobs:
   conditional-job:
@@ -15,6 +18,17 @@ jobs:
       - name: Check
         run: |
             echo ${{ inputs.test }}
+      - name: Check input value1
+        if:  ${{ contains(inputs.test1, 'YES') }}
+        run: |
+          if [ ${{ inputs.test1 }} = 'YES' ]; then
+            echo "Input value is YES"
+            # Add the steps you want to run when the input value is YES
+          else
+            echo "Input value is not YES"
+            # Add any fallback steps or skip execution altogether
+          fi
+
       - name: Check input value
         if:  ${{ inputs.test }}
         run: |
