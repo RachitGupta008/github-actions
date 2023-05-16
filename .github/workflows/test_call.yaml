@@ -17,7 +17,7 @@ jobs:
             echo ${{ inputs.test }}
       - name: Check input value
         run: |
-          if [ ${{ inputs.test }} ]; then
+          if [ ${{ inputs.test }} = true ]; then
             echo "Input value is YES"
             # Add the steps you want to run when the input value is YES
           else
