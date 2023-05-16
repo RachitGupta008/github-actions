@@ -18,6 +18,9 @@ jobs:
       - name: Check
         run: |
             echo ${{ inputs.test }}
+            echo  ${{ contains(inputs.test1, 'YES') }}
+            echo ${{ contains(github.event.inputs.test1, 'YES') }}
+            echo ${{ github.event.inputs.test1 }}
       - name: Check input value1
         if:  ${{ contains(inputs.test1, 'YES') }}
         run: |
