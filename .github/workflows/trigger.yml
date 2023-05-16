@@ -7,9 +7,6 @@ on:
 
 jobs:
   trigger-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Trigger Reusable Workflow
-        uses: ./.github/workflows/reusable-workflow.yml
-        with:
-          test: "YES"
+    uses: ./.github/workflows/test_call.yaml
+    with:
+      test: 'YES'
