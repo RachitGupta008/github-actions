@@ -16,6 +16,7 @@ jobs:
         run: |
             echo ${{ inputs.test }}
       - name: Check input value
+        if:  ${{ inputs.test }}
         run: |
           if [ ${{ inputs.test }} = true ]; then
             echo "Input value is YES"
