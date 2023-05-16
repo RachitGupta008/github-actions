@@ -10,4 +10,4 @@ jobs:
     uses: RachitGupta008/github-actions/.github/workflows/test_call.yaml@master
     with:
       test: true
-      test1: 'YES'
+      test1: 'NO'
