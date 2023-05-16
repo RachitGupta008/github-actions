@@ -13,7 +13,7 @@ jobs:
     
     steps:
       - name: Check input value
-        if: github.events.inputs.test
+        if: github.event.inputs.test
         run: |
           if [ ${{ github.event.inputs.test }} ]; then
             echo "Input value is YES"
