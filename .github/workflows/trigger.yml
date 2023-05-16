@@ -7,6 +7,6 @@ on:
 
 jobs:
   trigger-job:
-    uses: ./.github/workflows/test_call.yaml
+    uses: RachitGupta008/github-actions/.github/workflows/test_call.yaml@master
     with:
-      test: 'YES'
+      test: true
