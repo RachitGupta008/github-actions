@@ -9,5 +9,5 @@ jobs:
   trigger-job:
     uses: RachitGupta008/github-actions/.github/workflows/test_call.yaml@master
     with:
-      test: true
-      test1: 'YES'
+      test: false
+      test1: 'NO'
