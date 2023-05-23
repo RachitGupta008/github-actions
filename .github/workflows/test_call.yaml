@@ -24,7 +24,7 @@ jobs:
       - name: Check input value1
         id: opt
         run: |
-          if [[ ${{ inputs.test1 }} = 'YES' || ${{ inputs.test }} = false ]]; then
+          if [[ "${{ inputs.test1 }}" = "YES" || ${{ inputs.test }} = false ]]; then
             echo "Input value is YES"
             echo "out=hello">>$GITHUB_OUTPUT
             # Add the steps you want to run when the input value is YES
