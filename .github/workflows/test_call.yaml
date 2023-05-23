@@ -26,12 +26,13 @@ jobs:
         run: |
           if [[ ${{ inputs.test1 }} = 'YES' || ${{ inputs.test }} = false ]]; then
             echo "Input value is YES"
+            echo "out=hello">>$GITHUB_OUTPUT
             # Add the steps you want to run when the input value is YES
           else
             echo "Input value is not YES"
             # Add any fallback steps or skip execution altogether
           fi
-          echo "out=hello">>$GITHUB_OUTPUT
+          
       - name: Check Optional Value
         run: |
             echo ${{ steps.opt.outputs.out }}
