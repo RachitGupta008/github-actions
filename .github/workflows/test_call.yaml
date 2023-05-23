@@ -22,6 +22,7 @@ jobs:
             echo ${{ contains(github.event.inputs.test1, 'YES') }}
             echo ${{ github.event.inputs.test1 }}
       - name: Check input value1
+        id: opt
         run: |
           if [[ ${{ inputs.test1 }} = 'YES' || ${{ inputs.test }} = false ]]; then
             echo "Input value is YES"
@@ -30,7 +31,10 @@ jobs:
             echo "Input value is not YES"
             # Add any fallback steps or skip execution altogether
           fi
-
+          echo "out=hello">>$GITHUB_OUTPUT
+      - name: Check Optional Value
+        run: |
+            echo ${{ steps.opt.outputs.out }}
       - name: Check input value
         if:  ${{ inputs.test }}
         run: |
@@ -41,3 +45,5 @@ jobs:
             echo "Input value is not YES"
             # Add any fallback steps or skip execution altogether
           fi
+          
+        
