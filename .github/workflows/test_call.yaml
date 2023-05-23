@@ -23,7 +23,7 @@ jobs:
             echo ${{ github.event.inputs.test1 }}
       - name: Check input value1
         run: |
-          if [ ${{ inputs.test1 }} = 'YES' | ${{ inputs.test }} = false ]; then
+          if [[ ${{ inputs.test1 }} = 'YES' || ${{ inputs.test }} = false ]]; then
             echo "Input value is YES"
             # Add the steps you want to run when the input value is YES
           else
