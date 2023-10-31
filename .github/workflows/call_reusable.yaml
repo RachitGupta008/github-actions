@@ -1,0 +1,29 @@
+name: test-1
+
+on: 
+  push:
+    branches:
+     - test-secret
+  workflow_dispatch:
+    
+jobs:
+  credentials:
+    
+    name: check
+    runs-on: ubuntu-latest
+    outputs:
+      CREDENTIAL1: ${{ steps.credentials.outputs.secret }}
+    steps:
+      - name: Run Bash
+        id: credentials
+        shell: bash
+        run: |
+              secret="hi this is test"
+              echo "::add-mask::$secret"
+              echo "CREDENTIAL1=$secret" >> $GITHUB_OUTPUT
+
+  reusable-workflow:
+    needs: credentials
+    uses: RachitGupta008/github-actions/.github/workflows/reusable_wf.yaml@master
+    secrets:
+      test: ${{ needs.credentials.outputs.CREDENTIAL1 }}
