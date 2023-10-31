@@ -20,7 +20,7 @@ jobs:
         run: |
               secret="hi this is test"
               echo "::add-mask::$secret"
-              echo "CREDENTIAL1=$secret" >> $GITHUB_OUTPUT
+              echo "secret=$secret" >> $GITHUB_OUTPUT
 
   reusable-workflow:
     needs: credentials
