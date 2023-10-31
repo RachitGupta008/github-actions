@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: |
               secret="hi this is test"
-              echo "::add-mask::$secret"
+              
               echo "secret=$secret" >> $GITHUB_OUTPUT
 
   reusable-workflow:
